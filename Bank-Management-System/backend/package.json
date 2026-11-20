@@ -1,0 +1,35 @@
+{
+  "name": "bank-management-system-backend",
+  "version": "1.0.0",
+  "description": "Node.js and Express backend REST API for Bank Management System",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test --test-concurrency=1 tests/**/*.test.js",
+    "db:init": "node ../database/init.js",
+    "db:init:seed": "node ../database/init.js --seed",
+    "db:init:mongo": "node ../database/initMongo.js",
+    "db:clean:transactions": "node src/scripts/cleanPreviousTransactions.js"
+  },
+  "keywords": [
+    "banking",
+    "express",
+    "mysql",
+    "api"
+  ],
+  "author": "Bank Management System Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.19.0",
+    "mongodb": "^7.8.0",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  }
+}
